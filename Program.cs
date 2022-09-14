@@ -6,12 +6,12 @@
 Console.Write("Введите количество элементов массива: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
-string[] arrayOfStrings = new string[]  {};
-arrayOfStrings = new string[n];
-for (int i = 0; i < arrayOfStrings.Length; i++)
+string[] arrayStrings = new string[]  {};
+arrayStrings = new string[n];
+for (int i = 0; i < arrayStrings.Length; i++)
 {
   Console.Write($" Введите {i+1} строку: ");
-  arrayOfStrings[i] = Console.ReadLine();
+  arrayStrings[i] = Console.ReadLine();
 }
 
 void FillNewArray(string[] oldArray, string[] newArray, int lengthLimit)
@@ -52,9 +52,9 @@ string PrintArray(string[] array)
 
 int lengthLimit = 3;
 
-int numbersItems = CheckArray(arrayOfStrings, lengthLimit);
+int numbersItems = CheckArray(arrayStrings, lengthLimit);
 
-string[] newArrayOfStrings = new string[numbersItems];
+string[] newArrayStrings = new string[numbersItems];
 
-FillNewArray(arrayOfStrings, newArrayOfStrings, lengthLimit);
-Console.WriteLine($"{PrintArray(newArrayOfStrings)}");
+FillNewArray(arrayStrings, newArrayStrings, lengthLimit);
+Console.WriteLine($"{PrintArray(newArrayStrings)}");
